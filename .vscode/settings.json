@@ -1,0 +1,57 @@
+{
+	"workbench.colorCustomizations": {
+		"editor.background": "#131313",
+		"tab.hoverBackground": "#111",
+		"tab.inactiveBackground": "#000",
+		"tab.activeBackground": "#1b1b1b",
+		"tab.activeBorder": "#bb5400",
+		"editorIndentGuide.background1": "#252525",
+		"editorWhitespace.foreground": "#683700",
+		"editor.lineHighlightBorder": "#1a1a1a",
+		"editor.lineHighlightBackground": "#490050",
+		"editorBracketMatch.background": "#444",
+		"editorBracketMatch.border": "#b80318",
+		"editor.selectionBackground": "#3b3b3b",
+		//"editor.selectionHighlightBackground": "#702900",
+		"statusBar.background": "#2e2850",
+		"minimap.background" : "#1b1b1b",
+		"sideBar.background": "#1b1b1b"
+	},
+
+	"workbench.editor.wrapTabs": true,
+	"todohighlight.isEnable": true,
+	"todohighlight.keywords": [
+		{
+			"text": "TODO:",
+			"color": "red",
+			"backgroundColor": "rgba(0, 0, 0, 0)"
+		},
+		{
+			"text": "INFO:",
+			"color": "blue",
+			"backgroundColor": "rgba(0, 0, 0, 0)"
+		},
+		{
+			"text": "HACK:",
+			"color": "purple",
+			"backgroundColor": "rgba(0, 0, 0, 0)"
+		}
+	],
+	"editor.insertSpaces": false,
+
+	"workbench.list.openMode": "doubleClick",
+	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 200,
+	"workbench.activityBar.location": "hidden",
+	"workbench.editor.openPositioning": "last",
+	"workbench.editor.tabActionCloseVisibility": false,
+	"window.density.editorTabHeight": "compact",
+	"window.zoomLevel": 1,
+	"explorer.autoReveal": false,
+	"editor.stickyScroll.enabled": false,
+	"workbench.statusBar.visible": false,
+	"breadcrumbs.enabled": false,
+	"workbench.tree.enableStickyScroll": false,
+
+	"git.openRepositoryInParentFolders": "never"
+}

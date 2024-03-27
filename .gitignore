@@ -1,0 +1,4 @@
+KVM Helper.desktop
+pyrightconfig.json
+devices/*
+!devices/.gitkeep 
