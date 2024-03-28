@@ -4,6 +4,5 @@ A simple gui written in Python (with PyQt6) to help you pass USB Devices back an
 
  ![](Screenshot.png)
      
- The tool makes use of the `lsusb` command to list all available devices on the host OS, and uses the `virsh` command to comunicate with the VM.
- The VM's name you want the script to use must be written in the `vm_name` file in the root directory of the project.
- The script can be run with the `KVMHelper.sh` script.
+ The tool makes use of the `lsusb` command to list all available devices on the host OS, and uses the `virsh` command to comunicate with the VM. It also depends on the `pyqt6` and the `xmltodict` python libraries.
+ You can run the tool via the `KVMHelper.sh` bash script.
