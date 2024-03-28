@@ -237,6 +237,8 @@ class UI(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("kvm_helper.ui", self)
+        self.firstStart = True
+
         self.resize(80, 80)
         self.setWindowTitle("KVM USB Helper")
         self.setWindowIcon(QIcon("icons/app.png"))
@@ -285,6 +287,8 @@ class UI(QMainWindow):
         self.editRefreshSeconds.textChanged.connect(self.edit_refresh_seconds_text_changed)
 
         self.check_for_looking_glass()
+
+        self.firstStart = False
 
         self.refresh()
 
@@ -593,7 +597,8 @@ class UI(QMainWindow):
             self.enable_gui(True)
             self.btnStartVM.setEnabled(False)
             self.btnAddUSB.setEnabled(True)
-            self.check_for_looking_glass()
+            if not self.firstStart:
+                self.check_for_looking_glass()
         else:
             self.lblVM.setText("<html><head/><body><p align=\"center\"><span style=\" font-size:24pt; font-weight:600; color:#aa0000;\">•</span></p></body></html>")
             self.enable_gui(False)
@@ -661,6 +666,8 @@ class UI(QMainWindow):
             combo.setCurrentIndex(0)
 
     def update_auto_devices_section(self):
+        if self.firstStart:
+            return
         device_file = open("./settings.xml", "r+")
         xml_string = device_file.read()
         xml_dict = xmltodict.parse(xml_string)

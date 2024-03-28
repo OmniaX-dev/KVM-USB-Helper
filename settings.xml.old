@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<auto_devices>
+		<Windows11>Mouse_Keyboard_Combo,External_SSD</Windows11>
+		<win7></win7>
+	</auto_devices>
+	<default_vm>Windows11</default_vm>
+	<auto_refresh>
+		<enabled>0</enabled>
+		<seconds>60</seconds>
+	</auto_refresh>
+	<looking_glass>
+		<control_key>KEY_RIGHTCTRL</control_key>
+		<exec_path>looking-glass-client</exec_path>
+		<extra_args>-F</extra_args>
+	</looking_glass>
+</settings>
