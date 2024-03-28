@@ -4,7 +4,7 @@ from PyQt6.QtWidgets import *
 from PyQt6 import uic, QtCore
 
 from PyQt6.QtGui import QIcon, QIntValidator
-import subprocess, os, xmltodict, re
+import subprocess, os, xmltodict, re, platform
 from pathlib import Path
 
 DEVICE_FILE_CONTENT = "<hostdev mode='subsystem' type='usb' managed='no'>\n\
@@ -378,6 +378,8 @@ class UI(QMainWindow):
         return vm_name
 
     def run_command(self, command, to_lower=True):
+        if platform.system().lower().strip() == "windows":
+            return ""
         result = subprocess.run(command, stdout = subprocess.PIPE, stderr = subprocess.STDOUT, text = True)
         res = result.stdout.strip()
         if to_lower:
